@@ -3,6 +3,7 @@ from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("Calculator")
 
+
 @mcp.tool()
 def add(a: float, b: float) -> float:
     return a + b
@@ -23,6 +24,7 @@ def divide(a: float, b: float) -> float:
     if b == 0:
         raise ValueError("Division by zero")
     return a / b
+
 
 def _to_vector(x):
     arr = np.array(x, dtype=float)
